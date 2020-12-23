@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.home{
+    background-image: url('../img/pic.jpg');
+    background-size: cover;
+}
+.sen{
+    text-transform:uppercase;
+    height:200px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+}
+.sen h1{
+    margin-bottom:30px;
+    font-weight: 500;
+    letter-spacing:0.2em;
+    color:white;
+}
+.sen h2{
+    margin-bottom:30px;
+    font-weight: bold;
+    letter-spacing:0.4em;
+    overflow-x: hidden;
+    color:white;
+}
+.sen button{
+    height:auto;
+    padding:8px 37px;
+    font-size:12px;
+    margin-right:20px;
+    letter-spacing: 3px;
+    cursor:pointer;
+    outline:none;
+    border-color:black;
+    margin: 0px auto;
+    border-radius: 12px;
+}
+.sen button a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    
+}
+.sen button:hover{
+    background-color:crimson;
+    transition: all 0.3s ease;
+}
+header{
+    width:100%;
+    height:100vh;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    /*background-color:crimson;*/
+}
+.navbar.sticky{
+    background:crimson;
+}
+.navbar.sticky .nav-links li  a:hover{
+    color: #fff;
+}
+.logo {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.center-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    width: 90%;
+    margin: 0px auto;
+    font-family: "Poppins", sans-serif;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+.nav-links li a:hover{
+    color:crimson;
+    transition: all 0.3s ease;
+
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.lines {
+    display: none;
+}
+
+.lines div {
+    width: 25px;
+    height: 3px;
+    background-color:white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: black; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    .lines {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+        transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/* box*/
+.box-cont{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.column.right {
+    width: 40%;
+}
+.column.left {
+    width: 60%;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+.skills-content .right .html::before{
+    width: 90%;
+}
+.skills-content .right .css::before{
+    width: 80%;
+}
+.skills-content .right .js::before{
+    width: 60%;
+}
+.skills-content .right .php::before{
+    width: 50%;
+}
+.skills-content .right .mysql::before{
+    width: 40%;
+}
+h2.title {
+    margin-top: 30px;
+}
+.bars{
+    margin: 15px 0px;
+}
+.skills-content box-cont p{
+    word-spacing: 30px;
+}
+
+.card{
+    margin: 10px 20px !important;
+}
+section.skills {
+    height: 70%;
+}
+.skills-margin{
+    margin-bottom: 80px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .box-cont{
+        flex-direction: column;
+    }
+    .column.left,.column.right{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .skills-content box-cont p{
+        word-spacing: 20px;
+    }
+    .project-content {
+        flex-direction: column;
+    }
+    .card{
+        width: 100% !important;;
+        margin: 10px 0px !important;
+    }
+
+  }
+  .projects{
+    color:#fff;
+    background: #111;
+}
+.projects .title::before,{
+    background: #fff;
+}
+.projects .project-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.projects .project-content .card:hover{
+    background: crimson;
+}
+.projects .project-content .card .box{
+    transition: all 0.3s ease;
+}
+.projects .project-content .card:hover .box{
+    transform: scale(1.05);
+}
+.projects .project-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.projects .project-content .card:hover i{
+    color: #fff;
+}
+.projects .project-content .card .text{
+    font-size: 23px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+  
+
+.project-content {
+    display: flex;
+}
+.card {
+    margin: 0px 10px;
+}
+.project-content p{
+    margin:40px;
+}
+.contact{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    backgroundg:white;
+}
+img{
+    width: 20px;
+}
