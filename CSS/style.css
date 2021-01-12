@@ -157,6 +157,14 @@ header{
         display: block;
         cursor: pointer;
     }
+    .cont_info{
+        flex-direction: column;
+    }
+    
+    li {
+    
+        margin-bottom: 30px;
+    }
 }
 
 .nav-active {
@@ -318,7 +326,7 @@ section.skills {
     color:#fff;
     background: #111;
 }
-.projects .title::before,{
+.projects .title::before{
     background: #fff;
 }
 .projects .project-content .card{
@@ -367,9 +375,59 @@ section.skills {
     position: relative;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    backgroundg:white;
+    min-height: 25vh;
+    background:white;
+    
 }
 img{
     width: 20px;
+}
+.cont_info{
+    width: fit-content;
+    margin:0px auto;
+    list-style: none;
+    display: flex;
+    font-size:30px;
+
+}
+.full_div{
+    background-color: #e0e0e0;
+}
+.media-icons{
+    margin:-20px 0px 0px 0px;
+}
+.media-icons i {
+    font-size: 50px;
+    align-items: center;
+
+}
+.media-icons a{
+    text-decoration: none;
+}
+
+.media-icons {
+    width: fit-content;
+    margin:25px auto;
+}
+.icon{
+    margin:0px 10px 0px 0px;
+    
+}
+.footer{
+    background: #1B1B1B;
+    text-align: center;
+    font-size: 20px;
+    height:45px;
+    color:white;
+    
+}
+li{
+    margin-right: 20px;
+}
+div .title1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: -15px;
+    font-family: 'Ubuntu', sans-serif;
 }
